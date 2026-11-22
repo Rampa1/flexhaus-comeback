@@ -45,7 +45,7 @@ The form defaults to a **`mailto:` fallback**: on submit the member's email app 
 2. In `index.html`, on `<form id="comeback-form">`, set `data-endpoint="https://formspree.io/f/abcdwxyz"` and `action="https://formspree.io/f/abcdwxyz"` (the `action` is for no-JS visitors; remove `enctype="text/plain"`).
 3. Commit and push. JS posts via `fetch` and shows the success/error card; no-JS posts redirect to `thanks.html`.
 
-The free tier's 50/month is enough for a pilot; the at-risk segment is 214 members, so a full send needs either the €10/month Formspree tier (inside the €2,000 budget) or the mailto fallback.
+The free tier's 50/month is enough for a pilot; the at-risk segment is 214 members, so a full send needs either a paid Formspree tier (**[ASSUMPTION]** about €10/month; check current pricing) (inside the €2,000 budget) or the mailto fallback.
 
 ## Deploy (GitHub Pages)
 

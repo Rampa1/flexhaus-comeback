@@ -96,6 +96,7 @@ html[data-gl="on"] .hero, html[data-gl="frozen"] .hero { background: transparent
 .line span { display: block; }
 .line .volt { display: inline; }
 .line p { margin: 0 0 12px; }
+div.line { max-width: min(22rem, 100%); } /* div wrapper has body font-size, so 14ch was ~120px */
 @media (min-width: 768px) { .line { max-width: 16ch; } }
 .text-link { display: inline-flex; align-items: center; min-height: 44px; font: 600 16px/1.2 var(--sans); color: var(--volt); }
 .reveal { transition: opacity .5s var(--ease-out), transform .5s var(--ease-out); }

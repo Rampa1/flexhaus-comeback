@@ -101,9 +101,10 @@ function validate() {
   const emailMsg = email && !EMAIL_RE.test(email) ? "That email doesn't look quite right. Check for a typo?" : '';
   const mobMsg = mob && !/^\+?\d{7,15}$/.test(mob) ? 'That number looks short. Include the area code?' : '';
   const none = !email && !mob;
+  // Per-field errors first (clears stale aria-invalid), then the shared "fill in one" error re-marks both.
+  setErr('err-email', emailMsg, [F.email]);
+  setErr('err-mobile', mobMsg, [F.mobile]);
   setErr('err-contact', none ? 'Add an email or a mobile so we can confirm.' : '', none ? [F.email, F.mobile] : []);
-  setErr('err-email', emailMsg, emailMsg ? [F.email] : none ? [F.email] : []);
-  setErr('err-mobile', mobMsg, mobMsg ? [F.mobile] : none ? [F.mobile] : []);
   if (none) errs.push(F.email);
   if (emailMsg) errs.push(F.email);
   if (mobMsg) errs.push(F.mobile);
@@ -171,7 +172,7 @@ function showDone(d, mode) {
   const h = $('#done-title'), body = $('#done-body'), extra = $('#done-extra'), acts = $('#done-actions');
   acts.textContent = '';
   if (mode === 'sent') {
-    h.textContent = `Request sent. Welcome back${who}.`;
+    h.textContent = `Request sent. See you there${who}.`;
     body.textContent = `We'll confirm your ${d.cls}, ${d.slotText} by ${via} soon, usually within a day. Look out for a reminder the day before.`;
     extra.textContent = 'Need to change something? Just reply to our message.';
     say(`Request sent. We'll confirm by ${via}.`);

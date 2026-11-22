@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en-IE" data-gl="pending">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Comeback · FlexHaus</title>
+<meta name="description" content="Your spot's still here. Send a comeback class request to FlexHaus and the team will confirm your place.">
+<meta name="theme-color" content="#0E1116">
+<meta name="color-scheme" content="dark">
+<script>
+  (function () {
+    var r = document.documentElement, q = location.search;
+    r.classList.add('js');
+    try { if (matchMedia('(prefers-reduced-motion: reduce)').matches || /[?&]reducedmotion=1/.test(q)) r.classList.add('rm'); } catch (e) {}
+    try { if (localStorage.getItem('fh-paused') === '1') r.classList.add('paused'); } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/main.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#book-title">Skip to booking form</a>
+
+<header class="site-head">
+  <span class="wordmark" aria-label="FlexHaus">FLEXHAUS</span>
+  <button type="button" class="pause" id="pause-toggle" aria-pressed="false" hidden>
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><rect x="3" y="2" width="4" height="14" rx="1"/><rect x="11" y="2" width="4" height="14" rx="1"/></svg>
+    <span class="pause-label">Pause motion</span>
+  </button>
+</header>
+
+<main id="main">
+  <!-- Scene 1: hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <svg class="ecg ecg-hero" aria-hidden="true" viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <path d="M0 120 H430 l20 -14 l20 14 H540 l12 16 l26 -112 l26 132 l14 -22 H700 q30 -26 60 0 H1200"/>
+    </svg>
+    <div class="hero-inner wrap">
+      <p class="eyebrow" id="eyebrow">The comeback</p>
+      <h1 id="hero-title" class="display-xl">Your spot's still here.</h1>
+      <p class="hero-sub">Your membership, your place in the room. One class gets you moving again. Tell us when and we'll hold a spot for you.</p>
+      <div class="cta-row">
+        <a class="btn btn-volt" id="hero-cta" href="#book">Book your comeback class</a>
+        <p class="micro"><span data-pick-summary>Strength · Saturday 08:00</span> · change it any time</p>
+      </div>
+      <svg class="cue" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </div>
+  </section>
+
+  <div class="sticky-bar" id="sticky-bar" aria-hidden="true" inert>
+    <a class="btn btn-volt" href="#book" tabindex="-1">Book your comeback class</a>
+  </div>
+
+  <!-- Scene 2: momentum -->
+  <section class="momentum" aria-labelledby="momentum-title">
+    <h2 id="momentum-title" class="vh">Getting back into it</h2>
+    <div class="beat-wrap wrap"><p class="line reveal display-l">It's not a gap. <span>It's a run-up.</span></p></div>
+    <div class="beat-wrap wrap"><p class="line reveal display-l">Nobody's counting. <span>The room's just better with you in it.</span></p></div>
+    <div class="beat-wrap wrap">
+      <div class="line reveal">
+        <p class="display-l"><span class="volt">One class.</span> Then the next one's <span class="volt">easier.</span></p>
+        <a class="text-link" href="#book">Book your comeback class →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scene 3: proof -->
+  <section class="proof" aria-labelledby="proof-title">
+    <div class="wrap">
+      <h2 id="proof-title" class="display-m">Why now?</h2>
+      <ol class="beats" role="list">
+        <li class="beat reveal">
+          <span class="beat-num" aria-hidden="true">01</span>
+          <h3 class="display-s">One class restarts it.</h3>
+          <p class="stat"><strong>Half of our members who come back do it within a week.</strong><a class="fn" href="#source-1" id="fn-1" aria-describedby="source-1"><sup>1</sup><span class="vh"> (source)</span></a> The first step back is the only big one.</p>
+        </li>
+        <li class="beat reveal">
+          <span class="beat-num" aria-hidden="true">02</span>
+          <h3 class="display-s">An easy way back in.</h3>
+          <p>Strength at 08:00 on a Saturday, or Sunday if that suits better. Weekend mornings are when members getting back into it turn up most, and 08:00 is calmer than the evening rush. Rather do something else? Swap the class in one tap.</p>
+        </li>
+        <li class="beat reveal">
+          <span class="beat-num" aria-hidden="true">03</span>
+          <h3 class="display-s">Ask, and we'll hold you a spot.</h3>
+          <p>Send a request below. Someone from the team will confirm your place personally and remind you the day before.</p>
+        </li>
+      </ol>
+      <a class="btn btn-volt" href="#book">Book your comeback class</a>
+      <p class="footnote" id="source-1"><a href="#fn-1" aria-label="Back to the stat">1</a> Source: FlexHaus booking records, Dec 2024 – May 2026. 52% of members' second bookings were made within 7 days of their first.</p>
+    </div>
+  </section>
+
+  <!-- Scene 4: the comeback card -->
+  <section class="book" id="book" aria-labelledby="book-title">
+    <div class="wrap book-grid">
+      <p class="see-you display-l" aria-hidden="true">See you <span class="volt" id="see-day">Saturday</span>?</p>
+
+      <div class="card" id="card">
+        <div class="card-body" id="card-body">
+          <h2 id="book-title" class="display-m" tabindex="-1">Book your comeback class</h2>
+          <p class="card-intro">We've picked an easy one. Change anything you like.</p>
+
+          <form id="comeback-form" class="form"
+                data-endpoint=""
+                action="mailto:hello@flexhaus.ie?subject=Comeback%20class%20request"
+                method="post" enctype="text/plain">
+
+            <fieldset class="group">
+              <legend class="label">Class</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="class" value="Strength" checked><span>Strength <span class="tag">Easy pick</span></span></label>
+                <label class="chip"><input type="radio" name="class" value="Spin"><span>Spin</span></label>
+                <label class="chip"><input type="radio" name="class" value="HIIT"><span>HIIT</span></label>
+                <label class="chip"><input type="radio" name="class" value="Yoga"><span>Yoga</span></label>
+                <label class="chip"><input type="radio" name="class" value="Pilates"><span>Pilates</span></label>
+                <label class="chip"><input type="radio" name="class" value="Boxing"><span>Boxing</span></label>
+                <label class="chip"><input type="radio" name="class" value="Mobility"><span>Mobility</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="group">
+              <legend class="label">When</legend>
+              <div class="rows">
+                <label class="row"><input type="radio" name="slot" value="This coming Saturday, 08:00" data-slot="sat" checked><span><span class="slot-text">This coming Saturday · 08:00</span> <span class="tag">Easy pick</span></span></label>
+                <label class="row"><input type="radio" name="slot" value="This coming Sunday, 08:00" data-slot="sun"><span class="slot-text">This coming Sunday · 08:00</span></label>
+                <label class="row"><input type="radio" name="slot" value="A weekday, 17:00" data-slot="wkd"><span class="slot-text">A weekday · 17:00</span></label>
+                <label class="row"><input type="radio" name="slot" value="Another time (see note)" data-slot="other"><span class="slot-text">Another time: tell us below</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="label" for="f-name">First name</label>
+              <input id="f-name" name="first_name" type="text" autocomplete="given-name" autocapitalize="words" maxlength="60" required aria-describedby="err-name">
+              <p class="err" id="err-name" hidden></p>
+            </div>
+
+            <div class="contact" id="contact-group">
+              <p class="label" id="contact-hint">How should we confirm? Fill in one.</p>
+              <div class="field">
+                <label class="sublabel" for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" aria-describedby="contact-hint err-contact err-email">
+                <p class="err" id="err-email" hidden></p>
+              </div>
+              <div class="field">
+                <label class="sublabel" for="f-mobile">Or mobile</label>
+                <input id="f-mobile" name="mobile" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="contact-hint err-contact err-mobile">
+                <p class="err" id="err-mobile" hidden></p>
+              </div>
+              <p class="err" id="err-contact" hidden></p>
+            </div>
+
+            <div class="field">
+              <label class="label" for="f-note">Anything we should know? <span class="opt">(optional)</span></label>
+              <textarea id="f-note" name="note" rows="3" maxlength="500" enterkeyhint="send" aria-describedby="note-hint"></textarea>
+              <p class="hint" id="note-hint">An injury, nerves, a time that suits better. Whatever helps.</p>
+            </div>
+
+            <input type="hidden" name="_subject" value="Comeback request">
+            <input type="hidden" name="_next" value="thanks.html">
+            <input type="hidden" name="source" value="comeback-page">
+            <input type="hidden" name="utm_source" value="">
+            <input type="hidden" name="utm_campaign" value="">
+            <input type="hidden" name="utm_content" value="">
+            <input type="hidden" name="utm_term" value="">
+            <div class="hp" aria-hidden="true"><label for="f-gotcha">Leave this empty</label><input id="f-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+
+            <button type="submit" class="btn btn-volt btn-submit" id="submit-btn"><span class="btn-label">Send my comeback request</span></button>
+
+            <p class="small">This is a request: the team will confirm your place by email or text, usually within a day.</p>
+            <p class="small">We'll only use these details to sort out this class and send you one reminder the day before. We won't add you to a marketing list. <a class="optout" href="mailto:hello@flexhaus.ie?subject=Please%20stop%20comeback%20messages">Not ready? Stop comeback messages.</a> You can also reply STOP to any text from us.</p>
+          </form>
+        </div>
+
+        <div class="card-done" id="card-done" hidden>
+          <svg class="ecg ecg-done" aria-hidden="true" viewBox="0 0 600 60" preserveAspectRatio="none"><path pathLength="1" d="M0 36 H220 l10 -6 l10 6 H270 l6 7 l12 -40 l12 50 l8 -17 H360 q14 -12 28 0 H600"/></svg>
+          <h2 id="done-title" class="display-m" tabindex="-1"></h2>
+          <p id="done-body"></p>
+          <p class="small" id="done-extra"></p>
+          <p id="done-actions" class="done-actions"></p>
+        </div>
+
+        <div class="status vh" role="status" aria-live="polite" aria-atomic="true" id="status"></div>
+        <div class="alert" role="alert" id="alert"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>FlexHaus · the old print-works · <a href="mailto:hello@flexhaus.ie">hello@flexhaus.ie</a></p>
+    <p>Your details are only used to arrange your class. Questions about your data? <a href="mailto:hello@flexhaus.ie?subject=My%20data">Email us</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
